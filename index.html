@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#091629">
+  <meta name="description" content="Portfolio of Jared Samuel D. Navarro, BSIT student, graphic artist, and aspiring educator.">
+  <title>Jared Samuel D. Navarro | Portfolio</title>
+  <style>
+    :root{--paper:#091629;--ink:#f3f7ff;--muted:#b0c0d6;--green:#82baff;--lime:#b7d6ff;--line:#304663;--white:#142640;--serif:Georgia,"Times New Roman",serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit}button,a{-webkit-tap-highlight-color:transparent}.wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(9,22,41,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(180,207,246,.13)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:850;letter-spacing:-.06em;font-size:1.2rem;text-decoration:none}.brand span{color:var(--green)}
+    .navlinks{display:flex;gap:27px;align-items:center}.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem;font-weight:650}.navlinks a:hover{color:var(--green)}
+    .nav-cta{background:var(--green);color:white!important;padding:10px 16px;border-radius:999px}.menu-btn{display:none;border:1px solid var(--line);background:transparent;border-radius:50%;width:42px;height:42px;font-size:1.2rem}
+    .hero{padding:94px 0 76px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:52px;min-height:650px}
+    .eyebrow{display:inline-flex;gap:10px;align-items:center;text-transform:uppercase;letter-spacing:.14em;font-size:.73rem;font-weight:800;color:var(--green)}.dot{width:8px;height:8px;border-radius:50%;background:#80b9ff;box-shadow:0 0 0 5px #233f60}
+    h1{font-size:clamp(3.4rem,7vw,6.8rem);line-height:.95;letter-spacing:-.085em;margin:27px 0 24px;font-weight:850;max-width:800px}h1 em{font-family:var(--serif);font-weight:400;color:var(--green);letter-spacing:-.07em}
+    .hero p{max-width:560px;color:var(--muted);font-size:1.1rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border-radius:999px;padding:13px 20px;font-size:.92rem;font-weight:750;border:1px solid var(--green);transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--green);color:white}.secondary{color:var(--green)}
+    .visual{position:relative;min-height:420px;display:grid;place-items:center}.orb{width:min(100%,390px);aspect-ratio:1;border-radius:50%;background:var(--lime);position:relative;display:grid;place-items:center;overflow:hidden}.orb:before,.orb:after{content:"";position:absolute;border:1px solid rgba(32,37,31,.22);border-radius:50%;width:78%;height:78%}.orb:after{width:56%;height:56%}.monogram{font-size:clamp(6rem,14vw,10rem);font-weight:900;letter-spacing:-.13em;line-height:1;z-index:1;color:var(--green);transform:translateX(-.06em)}
+    .float-card{position:absolute;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:13px 17px;box-shadow:0 12px 35px #20251f0d;font-size:.85rem;font-weight:750}.float-card small{display:block;color:var(--muted);font-weight:500}.card-one{top:35px;left:-4px;transform:rotate(-5deg)}.card-two{bottom:38px;right:-4px;transform:rotate(4deg)}
+    .ticker{background:var(--green);color:white;padding:17px 0;overflow:hidden}.ticker-inner{display:flex;justify-content:space-around;gap:24px;flex-wrap:wrap;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:750}.ticker span{display:flex;gap:13px;align-items:center}.ticker b{color:var(--lime);font-size:1rem}
+    section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.kicker{color:var(--green);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:850}.section-head h2{font-size:clamp(2.5rem,5vw,4.3rem);line-height:1;letter-spacing:-.07em;margin:12px 0 0}.section-head p{max-width:370px;color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.about-note{background:var(--lime);border-radius:22px;padding:30px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}.about-note .big{font-size:4rem;line-height:1;letter-spacing:-.09em;font-weight:850;color:var(--green)}.about-note p{max-width:250px;font-weight:650}.about-copy h3{font-size:1.6rem;line-height:1.3;letter-spacing:-.04em;margin:0 0 18px}.about-copy p{color:var(--muted);margin:0 0 17px}.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}.tag{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:.82rem;font-weight:650}
+    #skills{background:#101f36}.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.skill{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:25px;min-height:200px}.skill .num{font-size:.78rem;color:var(--green);font-weight:850}.skill h3{font-size:1.25rem;margin:32px 0 7px;letter-spacing:-.035em}.skill p{margin:0;color:var(--muted);font-size:.93rem}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--white)}.project-art{height:255px;display:flex;align-items:center;justify-content:center;padding:26px;position:relative;overflow:hidden}.art-1{background:#1c3a5e}.art-2{background:#243e64}.art-3{background:#27375e}.art-4{background:#1b4565}
+    .poster{width:190px;height:205px;background:#dbe9fc;box-shadow:0 15px 30px #20251f20;padding:18px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-5deg);color:#183b68}.poster strong{font-size:2rem;line-height:.86;letter-spacing:-.09em}.poster span{font-size:.58rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800}.art-2 .poster{background:#10213a;color:#d5e8ff;transform:rotate(5deg)}.art-2 .poster strong{font-family:var(--serif);font-size:2.3rem;font-weight:400}.art-3 .poster{background:#273c6a;color:#fff9e9;transform:rotate(3deg)}.art-4 .poster{background:#dce9f8;color:#263e51;transform:rotate(-2deg)}
+    .project-info{padding:23px 25px 25px}.project-meta{display:flex;justify-content:space-between;gap:15px;color:var(--green);font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.project h3{font-size:1.35rem;letter-spacing:-.04em;margin:10px 0 6px}.project p{margin:0;color:var(--muted);font-size:.92rem}
+    .project-note{margin-top:20px;color:var(--muted);font-size:.86rem}
+    .contact{background:var(--green);color:white;padding:86px 0}.contact .kicker{color:var(--lime)}.contact h2{font-size:clamp(3rem,7vw,6rem);letter-spacing:-.08em;line-height:.95;max-width:800px;margin:16px 0 25px}.contact p{color:#d4e4f8;max-width:520px}.contact .btn{border-color:var(--lime)}.contact .primary{background:var(--lime);color:var(--ink)}.contact .secondary{color:white;border-color:#ffffff70}
+    footer{padding:24px 0;background:#071120;color:#d4e4f8;font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-inner a{text-decoration:none}
+    @media(max-width:760px){.wrap{width:min(100% - 32px,560px)}nav{height:66px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:65px;left:0;right:0;padding:20px 24px 24px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:18px}.navlinks.open{display:flex}.navlinks a{padding:5px 0}.navlinks .nav-cta{text-align:center;padding:11px}.hero{padding:65px 0 55px;grid-template-columns:1fr;gap:10px;min-height:0}.hero h1{font-size:clamp(3.5rem,15vw,5.5rem)}.visual{min-height:350px;margin:0 12px}.orb{width:290px}.monogram{font-size:8rem}.card-one{left:0;top:18px}.card-two{right:0;bottom:18px}.ticker-inner{justify-content:flex-start;padding:0 5px}.section-head{display:block}.section-head p{margin-top:18px}.about-grid{grid-template-columns:1fr;gap:24px}.about-note{min-height:220px}.skills-grid{grid-template-columns:1fr}.skill{min-height:155px}.skill h3{margin-top:20px}.project-grid{grid-template-columns:1fr}.project-art{height:240px}section{padding:72px 0}.contact{padding:72px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+    .resume-section{background:#101f36}.resume-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;align-items:stretch}.resume-details{padding:35px 8px 25px 0}.resume-details h3{font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:-.065em;line-height:1.04;margin:28px 0 20px}.resume-details>p{color:var(--muted);max-width:400px}.resume-facts{margin-top:28px;border-top:1px solid #304663}.resume-facts div{display:grid;grid-template-columns:100px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid #304663;font-size:.86rem}.resume-facts span{color:var(--muted)}.resume-facts strong{font-weight:700}.resume-preview{background:var(--white);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 18px 45px #20251f10}.resume-preview-bar{height:48px;padding:0 19px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:.73rem;font-weight:800;letter-spacing:.1em;color:var(--green)}.resume-preview-bar a{font-size:1.4rem;text-decoration:none}.resume-preview iframe{width:100%;height:530px;border:0;background:#fff}.resume-fallback{padding:0 18px 15px;color:var(--muted);font-size:.78rem;margin:0}.resume-fallback a{color:var(--green)}@media(max-width:760px){.resume-layout{grid-template-columns:1fr}.resume-details{padding:0}.resume-preview iframe{height:450px}.resume-facts div{grid-template-columns:90px 1fr}}
+  
+    /* Dark-blue portfolio motif: navy surfaces with icy-blue accents */
+    .nav-cta,.btn.primary{background:#82baff;color:#081629!important;border-color:#82baff}
+    .nav-cta:hover,.btn.primary:hover{background:#b7d6ff}
+    .btn.secondary{color:#c5ddff;border-color:#6388b5}
+    .orb,.about-note{background:#b7d6ff;color:#112a4b}
+    .orb:before,.orb:after{border-color:rgba(17,42,75,.22)}
+    .monogram,.about-note .big{color:#16365e}
+    .ticker{background:#152d4d;color:#e6f0ff}
+    .ticker b{color:#b7d6ff}
+    .float-card{background:#1b3454;color:#edf5ff;border-color:#385779;box-shadow:0 12px 35px #0005}
+    .float-card small{color:#b0c0d6}
+    .skill,.project,.resume-preview{background:#142640}
+    .tag{background:#13243b}
+    .contact{background:#122c4d;color:#f3f7ff}
+    .contact .primary{background:#b7d6ff;color:#081629!important;border-color:#b7d6ff}
+    .contact .secondary{color:#e3f0ff;border-color:#7198c7}
+    .resume-preview iframe{background:white}
+    .resume-preview-bar a,.resume-fallback a{color:#b7d6ff}
+    .poster{color:#16365e}
+    .art-2 .poster{color:#d5e8ff}
+    .art-3 .poster{color:#fff9e9}
+    .art-4 .poster{color:#263e51}
+    .portrait-orb{background:radial-gradient(circle at 50% 32%,#315e91 0%,#17365d 54%,#0c1c35 100%);overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.24);border:1px solid #4d729b}
+    .portrait-orb:before,.portrait-orb:after{display:none}
+    .portrait-photo{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;transform:scale(1.03)}
+    @media(max-width:760px){.portrait-orb{width:min(100%,330px)}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap" aria-label="Main navigation">
+    <a class="brand" href="#home">JSN<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="navlinks" id="navlinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#resume">Resume</a><a class="nav-cta" href="#contact">Let’s talk ↗</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero wrap" id="home">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> BSIT Student · Creative Thinker</div>
+      <h1>Jared Samuel<br>D. <em>Navarro.</em></h1>
+      <p>A curious learner with a creative background, a growing interest in technology, and a big appreciation for teaching, presenting, and connecting with people.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore my work <span>↘</span></a><a class="btn secondary" href="#contact">Get in touch ↗</a></div>
+    </div>
+    <div class="visual" aria-label="Portrait of Jared Samuel D. Navarro">
+      <div class="orb portrait-orb"><img class="portrait-photo" src="assets/profile-photo.png" alt="Jared Samuel D. Navarro smiling in a formal suit and tie" fetchpriority="high"></div>
+      <div class="float-card card-one">Creative by practice<small>Graphic design background</small></div>
+      <div class="float-card card-two">Always learning <small>Technology · Teaching · People</small></div>
+    </div>
+  </section>
+  <div class="ticker"><div class="wrap ticker-inner"><span><b>✳</b> Design-minded</span><span><b>✳</b> Fast learner</span><span><b>✳</b> Future educator</span><span><b>✳</b> People person</span></div></div>
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">01 / A little about me</div><h2>Curious by nature.<br>Creative by experience.</h2></div><p>My path sits at the intersection of creativity, technology, and communication.</p></div>
+      <div class="about-grid">
+        <div class="about-note"><div class="big">Learn.<br>Make.<br>Share.</div><p>I believe progress comes from staying curious and being willing to try.</p></div>
+        <div class="about-copy">
+          <h3>I’m a college student with professional experience and plenty left to discover.</h3>
+          <p>As a Bachelor of Science in Information Technology student, I’m building my understanding of technology one step at a time. Before focusing on my studies, I worked in a professional setting as a graphic artist, where creativity and attention to detail mattered.</p>
+          <p>I’m especially drawn to teaching, presenting, and opportunities that let me speak to a group and share ideas. Programming isn’t my strongest area yet, but I learn quickly, adapt, and keep working at the things I want to improve.</p>
+          <div class="tag-row"><span class="tag">Creative problem-solving</span><span class="tag">Communication</span><span class="tag">Continuous learning</span><span class="tag">Graphic design</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">02 / What I bring</div><h2>Skills in progress.</h2></div><p>A mix of hands-on creative experience, people skills, and a learner’s mindset.</p></div>
+      <div class="skills-grid">
+        <article class="skill"><div class="num">01 / CREATIVE</div><h3>Graphic Design</h3><p>Professional experience creating visual work, with an eye for layout, detail, and clear communication.</p></article>
+        <article class="skill"><div class="num">02 / PEOPLE</div><h3>Communication & Presenting</h3><p>Interested in speaking to groups, explaining ideas, and making information easier to understand.</p></article>
+        <article class="skill"><div class="num">03 / GROWTH</div><h3>Adaptability & Learning</h3><p>A fast learner who is open to feedback and willing to build skills through practice.</p></article>
+        <article class="skill"><div class="num">04 / TECHNOLOGY</div><h3>IT Foundations</h3><p>Developing knowledge as a BSIT student and continuing to explore the wider technology field.</p></article>
+        <article class="skill"><div class="num">05 / COLLABORATION</div><h3>Teamwork</h3><p>Ready to listen, contribute, and work with others toward a shared goal.</p></article>
+        <article class="skill"><div class="num">06 / NEXT CHAPTER</div><h3>Teaching & Facilitation</h3><p>Exploring ways to guide others, lead discussions, and share what I learn.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">03 / Selected work</div><h2>Ideas made visible.</h2></div><p>A starting place for showcasing design work, school projects, and future experiments.</p></div>
+      <div class="project-grid">
+        <article class="project"><div class="project-art art-1"><div class="poster"><span>Visual identity / 01</span><strong>MAKE<br>IT<br>MATTER.</strong><span>Concept study · Layout</span></div></div><div class="project-info"><div class="project-meta"><span>Graphic design</span><span>01</span></div><h3>Visual Design & Layouts</h3><p>A space for selected graphic design pieces, layout explorations, and visual communication work.</p></div></article>
+        <article class="project"><div class="project-art art-2"><div class="poster"><span>Poster series / 02</span><strong>IDEAS<br>IN<br>PUBLIC.</strong><span>Type · Composition</span></div></div><div class="project-info"><div class="project-meta"><span>Creative practice</span><span>02</span></div><h3>Poster & Campaign Concepts</h3><p>Showcase posters, apparel graphics, or campaign materials that demonstrate concept and craft.</p></div></article>
+        <article class="project"><div class="project-art art-3"><div class="poster"><span>Learning log / 03</span><strong>STAY<br>CURIOUS.</strong><span>Research · Reflection</span></div></div><div class="project-info"><div class="project-meta"><span>Academic work</span><span>03</span></div><h3>IT & Academic Projects</h3><p>Add class activities, system proposals, or other academic work as your IT skills grow.</p></div></article>
+        <article class="project"><div class="project-art art-4"><div class="poster"><span>Teaching concept / 04</span><strong>SHARE<br>WHAT<br>YOU KNOW.</strong><span>Explain · Connect</span></div></div><div class="project-info"><div class="project-meta"><span>Communication</span><span>04</span></div><h3>Presentations & Learning Materials</h3><p>Feature presentations, instructional materials, or activities that make ideas easier to learn.</p></div></article>
+      </div>
+      <p class="project-note">Note: These are illustrative portfolio placeholders, not claims of completed projects. Replace them with your real work, images, and short project descriptions.</p>
+    </div>
+  </section>
+  <section id="resume" class="resume-section">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">04 / My resume</div><h2>My experience,<br>at a glance.</h2></div><p>Explore my educational background, strengths, and professional objective in my full resume.</p></div>
+      <div class="resume-layout">
+        <div class="resume-details">
+          <div class="eyebrow"><span class="dot"></span> Resume · PDF</div>
+          <h3>Jared Samuel<br>D. Navarro</h3>
+          <p>BSIT student at Cebu Eastern College with an interest in communication, professional growth, and continuous learning.</p>
+          <div class="resume-facts"><div><span>Education</span><strong>Bachelor of Science in Information Technology</strong></div><div><span>Institution</span><strong>Cebu Eastern College</strong></div><div><span>Strengths</span><strong>Adaptability · Communication · Willingness to learn</strong></div></div>
+          <div class="actions"><a class="btn primary" href="assets/resume.pdf" target="_blank" rel="noopener">View full resume ↗</a><a class="btn secondary" href="assets/resume.pdf" download="Jared_Samuel_Navarro_Resume.pdf">Download PDF ↓</a></div>
+        </div>
+        <div class="resume-preview"><div class="resume-preview-bar"><span>RESUME / PDF PREVIEW</span><a href="assets/resume.pdf" target="_blank" rel="noopener" aria-label="Open resume in a new tab">↗</a></div><iframe src="assets/resume.pdf#toolbar=0" title="Jared Samuel D. Navarro resume preview" loading="lazy"></iframe><p class="resume-fallback">Preview not loading? <a href="assets/resume.pdf" target="_blank" rel="noopener">Open the PDF directly</a>.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="kicker">05 / Contact</div>
+      <h2>Have an idea?<br>Let’s talk about it.</h2>
+      <p>I’m open to learning opportunities, creative collaborations, and conversations about technology, communication, and teaching.</p>
+      <div class="actions"><a class="btn primary" href="mailto:purearth321123@gmail.com">purearth321123@gmail.com ↗</a><a class="btn secondary" href="assets/resume.pdf" target="_blank" rel="noopener">View my resume ↗</a></div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Jared Samuel D. Navarro</span><span>Made with curiosity & care.</span><a href="#home">Back to top ↑</a></div></footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navlinks = document.getElementById('navlinks');
+  menuBtn.addEventListener('click', () => {
+    const open = navlinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    menuBtn.textContent = open ? '×' : '☰';
+  });
+  navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navlinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); menuBtn.textContent='☰';
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
